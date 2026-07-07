@@ -1,12 +1,7 @@
 name: Workflow1          # A human-friendly name shown in the Actions tab
 
 on:
-  workflow_dispatch:
-    inputs:
-      Who_triggered:
-        description: 'What is your name: '
-        required: true
-        type: string                 # The EVENT: run this whenever code is pushed
+  push                # The EVENT: run this whenever code is pushed
 
 jobs:                      # One or more JOBS
   say-hello:               # This is the job's ID (you choose it)
