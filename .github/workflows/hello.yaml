@@ -1,4 +1,4 @@
-name: Hello World          # A human-friendly name shown in the Actions tab
+name: Workflow1          # A human-friendly name shown in the Actions tab
 
 on: push                   # The EVENT: run this whenever code is pushed
 
