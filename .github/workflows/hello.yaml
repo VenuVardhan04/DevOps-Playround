@@ -1,0 +1,13 @@
+name: Hello World          # A human-friendly name shown in the Actions tab
+
+on: push                   # The EVENT: run this whenever code is pushed
+
+jobs:                      # One or more JOBS
+  say-hello:               # This is the job's ID (you choose it)
+    runs-on: ubuntu-latest # The RUNNER: a fresh Ubuntu machine
+    steps:                 # Ordered STEPS
+      - name: Print a greeting
+        run: echo "Hello, world! CI/CD is running."
+
+      - name: Show the date
+        run: date
