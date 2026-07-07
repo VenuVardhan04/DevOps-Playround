@@ -1,6 +1,12 @@
 name: Workflow1          # A human-friendly name shown in the Actions tab
 
-on: push                   # The EVENT: run this whenever code is pushed
+on:
+  workflow_dispatch:
+    inputs:
+      Who_triggered:
+        description: 'What is your name: '
+        required: true
+        type: string                 # The EVENT: run this whenever code is pushed
 
 jobs:                      # One or more JOBS
   say-hello:               # This is the job's ID (you choose it)
@@ -11,3 +17,6 @@ jobs:                      # One or more JOBS
 
       - name: Show the date
         run: date
+
+      - name: Who triggered it
+        run: echo ${{inputs.Who_triggered}}
